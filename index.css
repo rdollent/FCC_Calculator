@@ -70,6 +70,7 @@ body {
 
 .calcBody {
   max-width: 500px;
+  min-width: 300px;
   margin: 100px auto;
 }
 
@@ -119,5 +120,11 @@ body {
   flex-basis: 50px;
 }
 
-
 /*end flex*/
+
+@media only screen and (max-width:768px) {
+  .calcBody {
+    width:100%;
+  }
+    
+}
