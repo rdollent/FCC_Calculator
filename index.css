@@ -1,0 +1,123 @@
+/*start CSS reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*End CSS reset*/
+
+* {
+  border: 1px solid black !important; /*to display borders of elements, helps with CSS position and resize*/
+  box-sizing:border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*background-color: #acda8b;*/
+}
+
+
+.calcBody {
+  max-width: 500px;
+  margin: 100px auto;
+}
+
+.window {
+  text-align: center;
+  margin: 20px auto;
+}
+.window input {
+  width: 80%;
+  height: 30px;
+}
+
+
+#txtResult {
+  border: 1px solid black;
+  border-bottom: 0;
+}
+
+#txtPreview {
+  border: 1px solid black;
+  border-top: 0;
+}
+
+/* start flex */
+
+.flex-container {
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rows {
+  display:flex;
+  flex-direction: row;
+  width:80%;
+  justify-content: center;
+}
+.keys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 10px;
+  padding: 0px;
+  /*flex-grow:1;*/
+  height: 50px;
+  flex-basis: 50px;
+}
+
+
+/*end flex*/
