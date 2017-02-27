@@ -56,7 +56,6 @@ table {
   box-sizing:border-box;
 }
 
-
 @font-face{
  font-family:'digital-num';
  src: url('digital_counter_7.ttf');
@@ -74,7 +73,6 @@ body {
   background-color: #fff;
 }
 
-
 .calcBody {
   max-width: 500px;
   min-width: 300px;
@@ -82,7 +80,7 @@ body {
   border: 20px solid #333333;
   border-radius: 30px;
   max-height: 500px;
-  background-color:#ee7787;
+  background-color:#dedede;
   padding: 20px;
 }
 
@@ -90,8 +88,8 @@ body {
   text-align: center;
   margin: 20px auto;
   height: 20%;
-
 }
+
 .window input {
   width: 100%;
   font-family:'digital-num';
@@ -99,7 +97,6 @@ body {
   background-color: #000;
   color:#0aff74;
 }
-
 
 #txtResult {
   border: 5px solid #000;
@@ -116,7 +113,6 @@ body {
   font-weight:bold;
 }
 
-
 .keys {
   border: 1px solid #107b7f;
   border-radius: 500px;
@@ -125,13 +121,14 @@ body {
   font-size: 150%;
   background-color: #107b7f;
   font-family: 'Source Code Pro';
-  
+  transition:0.1s; 
 }
 
 .operator {
   background-color:#343434;
   color: #fff;
   border-color:#343434;
+  transition:0.1s;
 }
 
 .clear {
@@ -139,12 +136,14 @@ body {
   color: #fff;
   border-color: #d12e3b;
   font-size: 120%;
+  transition:0.1s;
 }
 
 .equals {
   background-color: #f3e92b;
   border-color: #f3e92b;
   color: #fff;
+  transition:0.1s;
 }
 
 .unselectable {
@@ -153,11 +152,11 @@ body {
 }
 
 .pressed {
-  color:#000;
-  transition: 0.5s;
+  color:#002466;
+  background-color: #faebff;
+  border: 0;
+  transition:0.1s;
 }
-
-
 
 /* start flex */
 
