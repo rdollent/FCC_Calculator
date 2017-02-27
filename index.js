@@ -1,22 +1,22 @@
+window.onload = runThis;
+
 function runThis() {
 
-const keys = [].slice.call(document.getElementsByClassName("keys")); //converts HTML collection to array
+const keys = document.getElementsByClassName("keys");
+const arrKeys = [].slice.call(keys); //converts HTML collection to array
 const p = document.getElementById("txtPreview");
 const r = document.getElementById("txtResult");
 let flag = "off"; //used to record whether last event was equal sign
 let val;
 
-keys.forEach((x) => x.addEventListener("click", handleThis));
+arrKeys.forEach((x) => x.addEventListener("mousedown", handleThis));
 document.addEventListener("keydown", handleThis);
 
 function handleThis(e) {
-
   val = null;  //reset val to avoid binding val to any key
   let lastChar = p.value.slice(-1); //last character in p.value (p)
 
-
-
-  if(e.type == "click") {
+  if(e.type == "mousedown") {
     val = this.innerText;
     this.classList.add("pressed");
   }
@@ -35,8 +35,11 @@ function handleThis(e) {
       case "Backspace": val = "DEL";
       break;
     }
-    let a = document.querySelectorAll('a');
-    a[e.key].classList.add("pressed");
+    for(let i = 0; i < keys.length;i++) {
+      if(keys[i].innerText === val) {
+        keys[i].classList.add("pressed");
+      }
+    }
   }
 
   let operator = /[\+,\-,\*,\/]/.test(val);  //test if operator
@@ -83,9 +86,12 @@ function handleThis(e) {
       p.value = r.value;
     }
     flag = "on";
-    if(isNaN(r.value) || r.value == (Infinity || "-Infinity") ) {
+    if(isNaN(r.value) || isFinite(r.value) ===false) {
       r.value = "Error";
       p.value = "Error";
+    }
+    if(r.value.length > 17) {
+      r.value = Math.round(r.value);
     }
 
   }
@@ -121,6 +127,36 @@ function handleThis(e) {
   r.scrollLeft = r.scrollWidth;
 }
 
+//removing .pressed class for mouseup and keyup events
+arrKeys.forEach((x) => x.addEventListener("mouseup", removePressed));
+document.addEventListener("keyup", removePressed);
+
+function removePressed(e) {
+  if(e.type == "mouseup") {
+    val = this.innerText;
+    this.classList.remove("pressed");
+  }
+
+  if(e.type == "keyup") {
+    if(/\d|[\+,\-,\*,\/,\.,\=,\(,\)]/.test(e.key)) {
+      val = e.key;
+    }
+    switch (e.key) {
+      case "Enter": val = "=";
+      break;
+      case "Delete": val = "CLR";
+      break;
+      case "Escape": val = "CLR";
+      break;
+      case "Backspace": val = "DEL";
+      break;
+    }
+    for(let i = 0; i < keys.length;i++) {
+      if(keys[i].innerText === val) {
+        keys[i].classList.remove("pressed");
+      }
+    }
+  }
 }
 
-window.onload = runThis;
+}
