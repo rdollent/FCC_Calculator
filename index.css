@@ -52,47 +52,112 @@ table {
 /*End CSS reset*/
 
 * {
-  border: 1px solid black !important; /*to display borders of elements, helps with CSS position and resize*/
+  /*border: 1px solid black !important; /*to display borders of elements, helps with CSS position and resize*/
   box-sizing:border-box;
+}
+
+
+@font-face{
+ font-family:'digital-num';
+ src: url('digital_counter_7.ttf');
 }
 
 html, body {
   width: 100%;
   min-height: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 body {
-  /*background-color: #acda8b;*/
+  background-color: #fff;
 }
 
 
 .calcBody {
   max-width: 500px;
   min-width: 300px;
-  margin: 100px auto;
+  margin: 70px auto;
+  border: 20px solid #333333;
+  border-radius: 30px;
+  max-height: 500px;
+  background-color:#ee7787;
+  padding: 20px;
 }
 
 .window {
   text-align: center;
   margin: 20px auto;
+  height: 20%;
+
 }
 .window input {
-  width: 80%;
-  height: 30px;
+  width: 100%;
+  font-family:'digital-num';
+  text-align: right;
+  background-color: #000;
+  color:#0aff74;
 }
 
 
 #txtResult {
-  border: 1px solid black;
+  border: 5px solid #000;
   border-bottom: 0;
+  height: 70%;
+  font-size:300%;
 }
 
 #txtPreview {
-  border: 1px solid black;
+  border: 5px solid #000;
   border-top: 0;
+  height: 30%;
+  font-size: 110%;
+  font-weight:bold;
 }
+
+
+.keys {
+  border: 1px solid #107b7f;
+  border-radius: 500px;
+  font-weight:bold;
+  color:#fff;
+  font-size: 150%;
+  background-color: #107b7f;
+  font-family: 'Source Code Pro';
+  
+}
+
+.operator {
+  background-color:#343434;
+  color: #fff;
+  border-color:#343434;
+}
+
+.clear {
+  background-color: #d12e3b;
+  color: #fff;
+  border-color: #d12e3b;
+  font-size: 120%;
+}
+
+.equals {
+  background-color: #f3e92b;
+  border-color: #f3e92b;
+  color: #fff;
+}
+
+.unselectable {
+  user-select:none;
+  cursor:default;
+}
+
+.pressed {
+  color:#000;
+  transition: 0.5s;
+}
+
+
 
 /* start flex */
 
@@ -109,12 +174,12 @@ body {
   width:80%;
   justify-content: center;
 }
+
 .keys {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px 10px;
-  padding: 0px;
+  margin: 2px 10px;
   /*flex-grow:1;*/
   height: 50px;
   flex-basis: 50px;
@@ -122,10 +187,12 @@ body {
 
 /*end flex*/
 
-@media only screen and (max-width:768px) {
-  .calcBody {
-    width:100%;
-    max-width:768px;
-  }
+/*mobie site*/
+@media screen and (max-width:768px) {
+
+.calcBody {
+  width: 100%;
+  max-width:600px;
+}
     
 }

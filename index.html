@@ -5,7 +5,8 @@
   <script style="text/javascript" src="index.js"></script>
   <meta name="description" content="Freecodecamp Calculator">
   <meta name="author" content="rdollent">
-  <meta name="viewport" content="width=device-width,initial-scale=1"> <!--for mobile responsive! don't forget!-->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:900" rel="stylesheet">
 </head>
 <body>
 
@@ -15,36 +16,36 @@
     <input type="text" id="txtResult" value="" readonly><input type="text" id="txtPreview" value="" readonly>
   </div>
 <!--numbers-->
-  <div class="flex-container">
+  <div class="flex-container keys-all unselectable">
+    <div class="rows fifth">
+      <a class="keys clear">CLR</a>
+      <a class="keys">(</a>
+      <a class="keys ">)</a>
+      <a class="keys clear">DEL</a>
+    </div>
     <div class="rows first">
       <a class="keys">7</a>
       <a class="keys">8</a>
       <a class="keys">9</a>
-      <a class="keys">/</a>
+      <a class="keys operator">/</a>
     </div>
     <div class="rows second">
       <a class="keys">4</a>
       <a class="keys">5</a>
       <a class="keys">6</a>
-      <a class="keys">*</a>
+      <a class="keys operator">*</a>
     </div>
     <div class="rows third">
       <a class="keys">1</a>
       <a class="keys">2</a>
       <a class="keys">3</a>
-      <a class="keys">-</a>
+      <a class="keys operator">-</a>
     </div>
     <div class="rows fourth">
       <a class="keys">0</a>
       <a class="keys">.</a>
-      <a class="keys">+</a>
-      <a class="keys">=</a>
-    </div>
-    <div class="rows fifth">
-      <a class="keys">(</a>
-      <a class="keys">)</a>
-      <a class="keys">DEL</a>
-      <a class="keys">CLR</a>
+      <a class="keys equals">=</a>
+      <a class="keys operator">+</a>
     </div>
   </div>
 

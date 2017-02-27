@@ -1,5 +1,3 @@
-window.onload = runThis;
-
 function runThis() {
 
 const keys = [].slice.call(document.getElementsByClassName("keys")); //converts HTML collection to array
@@ -12,6 +10,7 @@ keys.forEach((x) => x.addEventListener("click", handleThis));
 document.addEventListener("keydown", handleThis);
 
 function handleThis(e) {
+
   val = null;  //reset val to avoid binding val to any key
   let lastChar = p.value.slice(-1); //last character in p.value (p)
 
@@ -19,6 +18,7 @@ function handleThis(e) {
 
   if(e.type == "click") {
     val = this.innerText;
+    this.classList.add("pressed");
   }
 
   if(e.type == "keydown") {
@@ -35,6 +35,8 @@ function handleThis(e) {
       case "Backspace": val = "DEL";
       break;
     }
+    let a = document.querySelectorAll('a');
+    a[e.key].classList.add("pressed");
   }
 
   let operator = /[\+,\-,\*,\/]/.test(val);  //test if operator
@@ -52,7 +54,7 @@ function handleThis(e) {
     flag = "off";
   }
 
-  if(number) {
+  if(number && r.value !== ")") {
     p.value += val;
     if (/\d/.test(r.value) === true || r.value === "") {
     r.value += val;
@@ -116,7 +118,9 @@ function handleThis(e) {
   }
 
   p.scrollLeft = p.scrollWidth;
-
+  r.scrollLeft = r.scrollWidth;
 }
 
 }
+
+window.onload = runThis;
