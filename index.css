@@ -79,8 +79,8 @@ body {
   max-width: 500px;
   min-width: 300px;
   margin: 70px auto;
-  border: 20px solid #b8b8b8;
-  border-radius: 30px;
+  border: 20px solid #9E9E9E;
+  border-radius: 10px;
   max-height: 500px;
   background:#ffb452;
   background: linear-gradient(#ffffff,#dbdbdb);
@@ -119,12 +119,12 @@ body {
 
 
 .keys {
-  border: 1px solid #107b7f;
-  border-radius: 500px;
+  border: 1px solid #607d8b;
+  border-radius: 5px;
   font-weight:bold;
   color:#fff;
   font-size: 150%;
-  background-color: #107b7f;
+  background-color: #607d8b;
   font-family: 'Source Code Pro';
   transition:0.1s;
   
@@ -138,16 +138,16 @@ body {
 }
 
 .clear {
-  background-color: #d12e3b;
+  background-color: #F44336;
   color: #fff;
-  border-color: #d12e3b;
+  border-color: #F44336;
   font-size: 120%;
   transition:0.1s;
 }
 
 .equals {
-  background-color: #f3e92b;
-  border-color: #f3e92b;
+  background-color: #FF9800;
+  border-color: #FF9800;
   color: #fff;
   transition:0.1s;
 }
@@ -186,7 +186,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2px 10px;
+  margin: 4px 10px;
   /*flex-grow:1;*/
   height: 50px;
   flex-basis: 50px;
