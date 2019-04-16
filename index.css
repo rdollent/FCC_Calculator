@@ -79,11 +79,11 @@ body {
   max-width: 500px;
   min-width: 300px;
   margin: 70px auto;
-  border: 15px solid #e4e4e4;
+  border: 15px solid #e4e4e400;
   border-radius: 20px;
   /*max-height: 500px;*/
   /*background:#ffb452;*/
-  background: linear-gradient(#ffffff,#dbdbdb40);
+  background: linear-gradient(#fdfdfd,#dbdbdb87);
   padding: 20px;
 }
 
@@ -186,9 +186,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4px 10px;
+  margin: 4px 7px;
   /*flex-grow:1;*/
-  height: 60px;
+  height: 70px;
   flex-basis: 100px;
 }
 
