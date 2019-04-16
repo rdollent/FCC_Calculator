@@ -81,7 +81,7 @@ body {
   margin: 70px auto;
   border: 20px solid #9E9E9E;
   border-radius: 10px;
-  max-height: 500px;
+  /*max-height: 500px;*/
   background:#ffb452;
   background: linear-gradient(#ffffff,#dbdbdb);
   padding: 20px;
@@ -188,8 +188,8 @@ body {
   align-items: center;
   margin: 4px 10px;
   /*flex-grow:1;*/
-  height: 50px;
-  flex-basis: 50px;
+  height: 60px;
+  flex-basis: 100px;
 }
 
 /*end flex*/
